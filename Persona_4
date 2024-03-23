@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Persona 4 - Gaming Arcana</title>
+<style>
+body {
+        background-color: #FFDF00; /* Color característico del protagonista */
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        padding-top: 130px;
+        text-align: center;
+    }
+    header {
+        background-color: #747171;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'BM Space', sans-serif; /* Cambio de la fuente */
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+    header .home {
+        width: 180px;
+        height: 180px;
+        background: url('D:/Persona/Logo.png') no-repeat center center;
+        background-size: cover;
+        text-indent: -9999px;
+    }
+    header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header nav a {
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        margin: 0 10px;
+        font-family: 'BM Space', sans-serif; /* Cambio de la fuente */
+    }
+    header nav a:last-child {
+        margin-right: 10px;
+    }
+    main {
+        padding: 60px;
+        text-align: justify;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    main p {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .character-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-auto-rows: 1fr;
+        grid-gap: 20px;
+        margin-top: 20px;
+    }
+    .character {
+        text-align: center;
+    }
+    .character img {
+        width: auto;
+        height: 300px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease;
+    }
+    .character img:hover {
+        transform: scale(1.05);
+    }
+    .character h3 {
+        margin-top: 10px;
+        font-size: 1.2em;
+    }
+    footer {
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        z-index: 1000;
+    }
+    h1, h2 {
+        text-align: center;
+        font-family: 'BM space'serif; /* Cambio de la fuente */
+    }s
+    #audio-control-button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 24px;
+        color: #ffd700;
+        transition: color 0.3s ease;
+    }
+    #audio-control-button:hover {
+        color: #ffc800;
+    }
+    .empty-box {
+        width: 100%;
+        height: 100px;
+        background-color: transparent;
+        border: none;
+        margin: 20px 0;
+    }
+    .title-with-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .title-image {
+        width: 150px;
+        height: auto;
+        margin-left: 20px;
+        float: right; /* Para alinear a la derecha */
+        margin-top: 10px; /* Espacio entre la imagen y el texto */
+        border: 1px solid #ccc; /* Borde similar a Word */
+        padding: 5px; /* Espacio dentro del borde */
+        border-radius: 5px; /* Bordes redondeados */
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<header>
+    <nav>
+        <a href="index.html" class="home"></a>
+    </nav>
+    <nav>
+        <a href="Velvet Room.html">
+            <img src="D:/Persona/BTN/P4G-FoolArcana - copia.jpg" alt="Velvet Room" width="90" height="130">
+            <span>Velvet Room</span>
+        </a>
+        <a href="Fusion Guide.html">
+            <img src="D:/Persona/BTN/Magician - copia - copia.jpg" alt="Guía de Fusiones" width="90" height="130">
+            <span>Guía de Fusiones</span>
+        </a>
+        <a href="Answers Guide.html">
+            <img src="D:/Persona/BTN/Hermit-0 - copia - copia (2).jpg" alt="Guía de Respuestas" width="90" height="130">
+            <span>Guía de Respuestas</span>
+        </a>
+        <a href="SLnConfidants.html">
+            <img src="D:/Persona/BTN/Lovers-0.webpjpg - copia - copia.jpg" alt="Social Links/Confidants" width="90" height="130">
+            <span>Social Links</span>
+        </a>
+    </nav>
+    <button id="audio-control-button" onclick="toggleAudio()">
+        <i class="fas fa-play"></i>
+    </button>
+</header>
+<main>
+    <div class="title-with-image">
+        <h1>Persona 4</h1>
+        <img src="Persona 4/Shin_Megami_Tensei-_Persona_4.jpg" class="title-image">
+    </div>
+       <p>Persona 4 es un juego de rol desarrollado y publicado por Atlus. Fue lanzado en Japón en 2008 y en América del Norte en 2009. El juego sigue la historia de un grupo de estudiantes de secundaria que investigan una serie de asesinatos misteriosos que ocurren en su ciudad natal. Con la ayuda de sus amigos y la capacidad de invocar manifestaciones físicas de su psique conocidas como Personas, el protagonista y sus compañeros de equipo intentan descubrir la verdad detrás de los crímenes.</p>
+		<p>La narrativa de Persona 4 se centra en temas de identidad, verdad y aceptación de uno mismo. A lo largo del juego, los jugadores deben enfrentarse a sus propias sombras internas y aceptar partes de sí mismos que pueden haber estado negando o reprimiendo.</p>
+	<h2>Historia</h2>
+	<p>Ambientado en 2011, el juego comienza con el protagonista (que es nombrado por el jugador) siendo enviado al pueblo rural de Inaba desde la gran ciudad, ya que sus padres están trabajando en el extranjero. Vive con su tío Ryotaro Dojima y su prima menor Nanako Dojima, y asiste a la escuela secundaria Yasogami, donde se hace amigo de Chie Satonaka, Yukiko Amagi y Yosuke Hanamura. Su tío Dojima es un detective de policía, cuyo asistente principal es un hombre llamado Tohru Adachi.</p>
+	<p>En su primer día de llegada a la ciudad, el protagonista tiene un extraño sueño que le enseña a usar una Persona, específicamente su primera Persona, Izanagi, en la batalla. A través de Chie, el protagonista y Yosuke se dan cuenta de que una leyenda urbana llamada Midnight Channel es cierta; Si miras fijamente un televisor apagado a medianoche en un día lluvioso, verás una figura extraña allí. Conmocionando a la otrora tranquila ciudad, una locutora de televisión, Mayumi Yamano, es encontrada muerta, colgando boca abajo de un poste telefónico. Cuando el protagonista mira por primera vez Midnight Channel después de escuchar el rumor de Chie, descubre que tiene el poder de entrar físicamente al televisor, pero su televisor es demasiado pequeño para soportarlo.</p>
+	<p>Cuando el protagonista informa esto a sus amigos al día siguiente, los tres deciden pasar por uno de los televisores grandes de Junes; todos logran pasar y posteriormente encuentran un extraño oso llamado Teddie; El grupo es dejado salir por este mismo oso después de vagar por el extraño mundo con miedo, además de descubrir que no hay salidas excepto los televisores del oso que él puede crear. Al día siguiente, el cuerpo de Saki Konishi, la chica que descubrió el cuerpo de Mayumi, es encontrado muerto también en una antena. Esto molesta mucho a Yosuke, el compañero de trabajo de Saki en Junes. Yosuke y el protagonista planean regresar a la televisión al día siguiente, con Chie actuando como una cuerda salvavidas, sin embargo, la cuerda que conecta a Chie y Yosuke terminó cortada mientras él y el protagonista estaban dentro del Canal de Medianoche.</p>
+	<p>Dentro del televisor, el protagonista y Yosuke descubren que hay un camino hacia un área que se parece a Inaba. Allí, en este reino creado por los verdaderos sentimientos de Saki llamado Twisted Shopping District, los sentimientos reprimidos de Yosuke de cómo Saki realmente no le agradaba, de quien albergaba un profundo enamoramiento no correspondido, se manifiestan en una figura clonada de sí mismo. La incapacidad de Yosuke para aceptar la afirmación del clon de que no ingresó al reino por la muerte de Saki (y que para él todo era una aventura) le permite convertirse en Shadow Yosuke. Cuando el protagonista lo derrota con Izanagi, Yosuke acepta sus verdaderos sentimientos, permitiendo que la Sombra se manifieste en la Persona de Yosuke, Jiraiya. El protagonista descubre que tiene un poder especial llamado Comodín que le permite manejar múltiples Personas (a diferencia de todos los demás miembros del grupo que solo tienen una).</p>
+	<p>Finalmente, una figura sombría comienza a aparecer en Midnight Channel, que el grupo teme que sea la mejor amiga de Chie, Yukiko, quien acaba de aparecer recientemente en las noticias, aunque todavía está presente en el mundo real. Desafortunadamente, Yukiko finalmente es secuestrada y luego aparecen imágenes claras y vívidas de ella en Midnight Channel.</p>
+	<p>Con Teddie brindando apoyo analítico, el protagonista y Yosuke deciden aventurarse en el mundo de la televisión (específicamente en la mazmorra de Yukiko, el Castillo de Yukiko) y usar sus Personas para luchar. Ambos le advierten a Chie que no debería entrar ya que carece de Persona, aunque ella ignora la advertencia. En el segundo piso del castillo, Chie es atrapada y sus emociones se manifiestan y luchan contra la pareja como Shadow Chie, quien se deleita con los celos de Chie hacia Yukiko; aunque después de su derrota, Shadow Chie se convierte en la propia Persona de Chie, y Chie se une al trío como el tercer combatiente.</p>
+	<p>El trío finalmente encuentra a Yukiko, junto con otra 'Yukiko': Shadow Yukiko. Shadow Yukiko expresa su disgusto por heredar la posada y se lo confiesa en broma al protagonista, Yosuke y Chie. Shadow Yukiko llama a Chie su Príncipe Azul y le pide que la lleve a algún lugar muy, muy lejano para escapar de su destino de heredar el Amagi Inn. Confundida y conmocionada, Yukiko le ruega a Shadow Yukiko que se detenga. Haciendo caso omiso de las súplicas de Yukiko, Shadow Yukiko se burla de Yukiko y le pregunta por qué querría que dejara de confesar sus verdaderos sentimientos. Shadow Yukiko exclama que ella es Yukiko y simplemente expresa sus pensamientos. Yukiko niega las afirmaciones de Shadow Yukiko y le dice que ella no es ella. Impulsada por la negación de Yukiko, Shadow Yukiko se transforma en un pájaro enjaulado y ataca al grupo. El trío finalmente logra defenderse de la sombra, y con Yukiko finalmente dispuesta a enfrentarse a sí misma, la sombra se transforma en la Persona de Yukiko.</p>
+	<p>El protagonista y el grupo ven aparecer otra figura extraña en la televisión y sospechan que es un motociclista que apareció recientemente en las noticias del mundo real; Kanji Tatsumi. Mientras buscan al niño, el grupo ve a un extraño joven esbelto vestido de azul que parece estar siguiéndolo. No pueden vigilar lo suficiente a Kanji para evitar que sea secuestrado, y una vez que lo es, comienza a aparecer claramente en el canal. El equipo se aventura en Steamy Bathhouse, donde encuentran a Kanji frente a su Sombra , manifestada por él cuestionando su orientación sexual, posible homosexualidad y siendo ridiculizado por las niñas por poseer intereses estereotipados "femeninos" como la costura. Kanji acepta de mala gana su Sombra y recibe su Persona.</p>
+	<p>Cuando Kanji es rescatado, el grupo se da cuenta de que las cuatro víctimas del secuestro (Yamano, Saki, Yukiko y Kanji) aparecieron en la televisión de la vida real antes de aparecer en Midnight Channel. Además, las primeras apariciones de Yukiko y Kanji en el canal fueron borrosas y desenfocadas, aunque esas apariciones ocurrieron antes de que desaparecieran. Después de que desaparecieron, sus apariciones en Midnight Channel se volvieron claras, enfocadas y representativas de sus emociones internas. Por lo tanto, el grupo concluye que las víctimas aparecerán primero en la televisión del mundo real, luego aparecerán de forma borrosa en Midnight Channel, luego serán secuestradas y luego tendrán apariciones vívidas en el canal hasta que mueran en el siguiente día de niebla. Además, las formas de Sombra de las víctimas son sus verdaderas emociones, que obtienen su poder de la incapacidad de su anfitrión para aceptarlas (ya que cada víctima negó su forma de Sombra).</p>
+	<p>Llama la atención de la ciudad que una celebridad modelo local, Rise Kujikawa, vendrá a Inaba. Sin embargo, el grupo se preocupa cuando ven una silueta confusa en Midnight Channel que parece parecerse a Rise. El grupo no puede evitar que ella sea secuestrada, tras lo cual comienza a aparecer claramente en Midnight Channel. Cuando se enfrenta a ella en su mazmorra, el Marukyu Striptease, se niega a aceptar su forma de sombra; involucra al grupo en una batalla, pero eventualmente, usa el movimiento Supreme Insight para volverse invencible.</p>
+	<p>El grupo no puede hacer nada al respecto, pero Teddie interviene y usa su poder interior para destruir al monstruo. Esto da como resultado que su cuerpo quede total y absolutamente aplastado, casi matándolo. Con el tiempo, las emociones internas de Teddie sobre sí mismo se manifiestan y crean a Shadow Teddie, que lucha y pierde ante el grupo. Teddie obtiene su propia Persona después de su derrota, al igual que Rise. Rise asume el papel de Teddie como apoyo analítico, mientras que Teddie se une al grupo como personaje jugable. Teddie también obtiene un cuerpo humano en el mundo real. El grupo, por segunda vez, se encuentra con el delgado adolescente de antes, que ahora se ha interesado en Kanji, la próxima víctima.</p>
+	<p>Después del rescate y la recuperación de Rise (y de que Teddie estuviera "entrenando" en TV World para reparar su cuerpo exhausto y prepararlo para ser un combatiente jugable), el malhablado y en gran medida impopular maestro de escuela Kinshiro Morooka, a pesar de nunca aparecer ni en las noticias ni en Midnight Channel fue encontrado muerto de manera similar a las dos primeras víctimas. El grupo se sorprende al ver cómo se ha abandonado por completo el patrón del asesino. El extraño y delgado adolescente que el grupo encontró antes se revela como Naoto Shirogane, un joven aspirante a detective que ayuda al Departamento de Policía en el caso. Comenta que la policía encontró a un sospechoso que confesó su culpabilidad, aunque aún no han revelado su identidad; Naoto dice que es un estudiante de otra escuela secundaria.</p>
+	<p>Cuando comienzan las vacaciones de verano, aparece una imagen clara y vívida en Midnight Channel (no precedida por una imagen borrosa) que muestra a un niño extraño burlándose del protagonista diciéndole "ven a buscarme". Una investigación por la ciudad realizada por el partido para encontrar la identidad del niño revela que es Mitsuo Kubo, el mismo sospechoso que la policía está buscando. El grupo derrota su forma de sombra dentro de su mazmorra de Midnight Channel, Void Quest, lo saca del televisor y lo entrega a la policía como el verdadero asesino. Durante las vacaciones de verano del grupo y el comienzo del segundo semestre, comienzan a hacerse amigos de Naoto, quien se ha matriculado como estudiante en Yasogami, y se sienten aliviados de que el caso esté cerrado. Sin embargo, Naoto señala las incongruencias del caso, concretamente cómo Morooka fue simplemente asesinado a golpes con un objeto contundente.</p>
+	<p>Las sospechas de Naoto de que Kubo es un asesino imitador se demuestran correctas cuando él, después de aparecer en la televisión del mundo real para provocar al asesino (habiendo llegado a la misma conclusión con respecto al patrón del asesino), es secuestrado y arrojado al Midnightn Channel. Cuando el grupo sale a su mazmorra, el Laboratorio Secreto, para salvarlo, descubren que en realidad Naoto nació mujer y adoptó una identidad masculina para evitar el sexismo del departamento de policía. Después de que la sombra de Naoto es derrotada, ella acepta su identidad femenina y se une al grupo con su propia Persona, y sus excelentes habilidades de detective resultan ser un activo valioso para el resto del viaje del equipo de investigación.</p>
+	<p>El 20 de octubre, el protagonista recibe una misteriosa carta dirigida a él: el nombre y la dirección del remitente no se encuentran en ninguna parte de la carta que solo dice: "no rescates más" sin mayúsculas ni puntuación. El grupo se da cuenta de que la entrega de esta carta al protagonista significa que el culpable está al tanto de sus actividades.</p>
+	<p>El 5 de noviembre marca el inicio del clímax del juego, cuando se dirige otra carta al protagonista; dice "si no te detienes esta vez, meterán y matarán a alguien cercano" nuevamente, sin mayúsculas, puntuación ni gramática. Desafortunadamente, Dojima ve la carta y envía al protagonista a la estación de policía, sus sospechas sobre su participación en el caso (con él y sus amigos encontrados en la escena del crimen) ahora se confirman como ciertas. Luego se informa que Nanako fue secuestrada y, de hecho, se la ve en el Midnight Channel esa noche; El grupo, utilizando el razonamiento deductivo de Naoto, descubre que el culpable debería ser un sospechoso de poca monta en el primer asesinato, Taro Namatame, ya que utiliza un camión de reparto, algo que puede contener un televisor con acceso a TV World y no sospechoso para la gente corriente. Tampoco se encontraron señales de entrada forzada en la casa de Dojima, un claro indicador de que se trataba de alguien que conocía a Nanako (como Namatame).</p>
+	<p>Cuando Dojima persigue a Namatame, los autos chocan hiriendo gravemente a Dojima mientras Namatame y Nanako desaparecen en el canal Midnight a través del televisor grande en la camioneta de Namatame. Mientras Dojima descansa en el hospital, el grupo llega a la conclusión de que Namatame debe ser el verdadero asesino. Él y Nanako son localizados en la próxima mazmorra de Midnight Channel, Heaven . Cuando se le confronta, Namatame afirma que en realidad está "salvando gente", dejando al grupo confundido, pero no menos enojado con él. Una sombra ( Kunino-sagiri ) surge de Namatame e intenta atacar al grupo, pero después de ser derrotado, el equipo escolta a Nanako y Namatame fuera de la mazmorra. Ambos son enviados al hospital heridos, y Namatame se encuentra en un estado mental demasiado inestable para hacer declaraciones a la policía o al grupo.</p>
+	<p>Desafortunadamente, en este momento, el mismo tipo de niebla que recorre el Canal de Medianoche y que reduce la visibilidad sin gafas especiales se encuentra corriendo por el mundo real. El equipo atraviesa un período estresante mientras espera que Nanako se recupere. El grupo visita periódicamente a Dojima y Nanako en el hospital. Cada vez más personas comienzan a enfermarse a causa de la niebla, y los médicos comentan que en realidad no hay evidencia visible en Nanako que indique qué está causando su enfermedad (aunque es casi seguro que esto se debe a cómo los poderes sobrenaturales de la niebla y la tecnología del hospital no vayan de la mano).</p>
+	<p>El 3 de diciembre es el último punto de inflexión en el juego. Ese día, después de que el grupo se apresura al hospital cuando Adachi los llama para decirles que la condición de Nanako ha empeorado, Nanako parece sucumbir a sus heridas y morir. Furioso, un emocionado Dojima intenta entrar en la sala de Namatame y matarlo, pero los guardias lo detienen y se lo llevan a rastras. El grupo entra a la habitación de Namatame y observa que está mentalmente inestable e incoherente. Como Adachi les dijo anteriormente, casi no hay evidencia que la policía pueda usar para condenar, o incluso detener aún más a Namatame, y la historia sobre las personas que ingresan a los televisores nunca se sostendría en los tribunales. El grupo ve una manifestación de la Sombra de Namatame en Midnight Channel regodeándose de sus acciones y desafiando al grupo a hacer algo al respecto. Yosuke propone asesinar a Namatame ahora arrojándolo a la televisión mientras tengan la oportunidad, para hacer justicia a sus víctimas y asegurarse de que no pueda reclamar más. La decisión del jugador decide lo que sucede a continuación.</p>
+	<ul>
+		<li>Si el protagonista aprueba los deseos de Yosuke, Namatame es arrojado a la televisión y presumiblemente asesinado por las Sombras. Se confirma la muerte de Nanako. Un Teddie entristecido regresa al mundo de la televisión, y el misterio queda sin resolver y el grupo nunca se da cuenta de que el hombre que mataron no era el verdadero culpable, mientras que tanto los investigadores como el público no saben la verdad del caso. La niebla todavía cubre la ciudad 3 meses después, en marzo, cuando el protagonista abandona Inaba. Es probable que el jugador interprete los créditos bastante pesimistas con "Corridor" de fondo, así como la existencia misma de caminos alternativos en el árbol de diálogo, como indicadores claros de que este no era el verdadero final.</li>
+		<li>Si Namatame se salva, pero el protagonista no puede convencer al grupo de que necesitan profundizar en el caso, o si el protagonista puede hacerlo pero no puede adivinar correctamente la identidad del asesino 2 días después, entonces Nanako vuelve a la vida. pero permanece hospitalizado. El juego termina, con Teddie regresando nuevamente al mundo de la televisión (y sin descubrir nunca que Nanako está viva), y el misterio queda sin resolver. Namatame se declara culpable de los cargos de secuestro, pero no culpable de los cargos de asesinato, como se informó en las noticias. Se reproduce de nuevo la misma secuencia de créditos deprimente, otra indicación para el jugador de que este no es el verdadero final.</li>
+	</ul>
+	<p>Para llegar al final Normal o Verdadero, el protagonista debe convencer al grupo de calmar sus emociones y profundizar en el caso para evaluar si Namatame es realmente culpable. Al día siguiente, escuchan su historia en el hospital. Una noche, observó a Yamano en el canal Midnight y, sin pensarlo, extendió la mano para tocar el televisor, lo que le hizo descubrir su poder para entrar en él. Al día siguiente, descubrió la noticia de la muerte de Yamano y se preguntó si la imagen que vio la noche anterior era una señal de socorro de ella. Más tarde, observó a Saki en el Midnight Channel y temió que le aguardara un destino similar; Intentó advertirle del peligro que corría, pero esto no logró evitar que muriera. La próxima vez que vio a Yukiko en el canal, interpretó su apariencia como si intentara decir que TV World era un lugar seguro; entonces, decidió que tendría que obligar a las personas que aparecían en Midnight Channel a entrar en los televisores para salvarlos y evitar que el asesino los matara. Es por eso que secuestró a Yukiko, Kanji, Rise, Naoto y Nanako, sin saber todo este tiempo que los había estado poniendo en peligro mortal, y no fue hasta que él mismo ingresó al Mundo de la TV al ser acorralado por la policía que entendió. lo peligroso que era realmente. Naoto llega a la conclusión de que el verdadero culpable del caso es quien arrojó a Yamano y Saki al televisor. Desde el punto de vista de Namatame, todos los que arrojó al televisor reaparecieron sanos y salvos más tarde (gracias a los esfuerzos del grupo), demostrándole que sus acciones estaban funcionando, animándolo así a continuar. Todo esto deja en claro que la manifestación de la Sombra que el grupo vio el 3 de diciembre no expresaba los pensamientos de Namatame; sino más bien, era un reflejo de lo que el Equipo de Investigación creía que eran.</p>
+	<p>Ahora, el protagonista debe adivinar la identidad del verdadero asesino a partir de una lista de 26 sospechosos en la narración del juego. Si fallan tres veces, obtendrán un mal final como se mencionó anteriormente. El sospechoso correcto es Tohru Adachi, el asistente de Dojima.</p>
+	<p>Una vez confrontado, Adachi escapa al mundo de la televisión. Cuando el grupo lo encuentra allí, explica sus acciones. Fue durante una discusión que tuvo con Yamano que descubrió su poder para empujar a la gente hacia el televisor, por lo que accidentalmente empujó a Yamano hacia adentro, causándole la muerte, y quedó emocionado por la emoción. Más tarde, empujó deliberadamente a Saki hacia el televisor después de que ella lo abofeteara y lo rechazara. Luego manipuló a Namatame para que secuestrara al resto, animándolos a ponerlos en un "lugar seguro", prediciendo correctamente que esto pondría la idea de usar los televisores como un refugio seguro en la cabeza de Namatame.</p>
+	<p>Sin embargo, él mismo arrojó a Kubo al mundo de la televisión ya que su falsa confesión detendría las acciones de Namatame y por la emoción de tener alguna participación directa. Afirma que hizo todo esto para poder sentarse y disfrutar de la yuxtaposición de Namatame y los esfuerzos del grupo; Después de que el grupo pasa por su mazmorra , afirma que es el deseo de la humanidad permitir que la niebla se instale para resolver su angustia emocional. Luego lucha contra el grupo usando su propia Persona, Magatsu-Izanagi, y pierde. Luego, el grupo lucha contra el espíritu que usó a Adachi como marioneta; Ameno-sagiri. Tres meses después de su derrota en marzo, Nanako sale del hospital. Ahora, el protagonista puede irse a casa sin provocar los eventos desencadenantes; si lo hace, se reproduce el "Final normal" que muestra los créditos verdaderos.</p>
+	<p>Sin embargo, si el protagonista (después de ver por primera vez todos sus S. Links al máximo) insiste en encontrarse con el grupo en Junes, entonces el grupo comienza a reconocer las incongruencias en la teoría de que Adachi es un lobo solitario; ¿Cómo consiguieron él y Namatame el poder de entrar en los televisores en primer lugar? ¿Cómo fue el propio protagonista? ¿Cómo empezaron Midnight Channel y sus rumores? Al volver sobre sus pasos desde el primer día del juego, el protagonista se da cuenta de que el verdadero antagonista y conductor del juego es el encargado de la gasolinera Moel, o en realidad, el dios Izanami. Cuando el asistente estrechó la mano del protagonista el primer día del juego, esto le dio el poder de luchar con Personas, y revela haber hecho lo mismo con Adachi y Namatame.</p>
+	<p>El grupo se enfrenta a Izanami en la mazmorra final, Yomotsu Hirasaka . Después de exponer la forma de diosa de Izanami usando Orb of Sight y revelar su forma podrida de Izanami-no-Okami, el grupo lucha duramente, pero Izanami intenta enviar al protagonista a Yomi usando sus "Mil Maldiciones", pero todas sus Sus compañeros de equipo, uno por uno, caen protegiéndolo, provocando que inevitablemente también sea arrastrado hacia abajo. Forjando el poder de sus Vínculos Sociales, el protagonista regresa al campo de batalla despertando a su Persona definitiva , e Izanami lanza Oho-Ikazuchi para matarlo, pero falla, provocando que muera en un ataque de Myriad Truths. Matar a Izanami la impulsa a eliminar la niebla y afirma que ya no interferirá con la humanidad y les permitirá tomar las decisiones que les brinden felicidad, luego se desvanece. Después de derrotar al verdadero culpable del caso de asesinato, Midnight Channel recurre a lo que era hace mucho tiempo según Teddie; un hermoso mundo de alegría al que Teddie ahora puede regresar feliz. Teddie regresa y el protagonista se va en tren, con sus amigos despidiéndose alegremente.</p>
+	<h2>Temas</h2>
+	<p>El tema de Persona 4 es la "verdad", ya que los personajes superan sus propios problemas enfrentándose a sí mismos, ayudándolos a ver los rumores y falsedades del pasado. Todos estos problemas se unen una vez que el grupo se enfrenta al conductor de los asesinatos, Izanami, quien cree abiertamente en la feliz ignorancia, lo que obliga a creer que los humanos nunca podrán alcanzar realmente la verdad debido a la cantidad limitada de personas que pueden conocer a lo largo de su vida y, por lo tanto, su incapacidad para encontrarse y definirse verdaderamente a sí mismos. Incluso entonces, el protagonista vería más allá de sus abrumadoras fachadas al captar los vínculos que llegó a conocer y comprender, aunque fueran muy pocos en comparación con toda la humanidad.</p>
+	<p>El elenco principal, asfixiados por la realidad por miedo a perder sus relaciones, se ven obligados a afrontar sus verdaderos sentimientos con el apoyo de sus compañeros. Los Vínculos Sociales de los personajes principales diferencian entre la realidad y las relaciones de los personajes, ya que se dan cuenta de que lo verdaderamente importante son sus propias relaciones, y que cada uno tiene el poder de cambiar la realidad misma.</p>
+	<p>Persona 4 tiene temas sintoístas, siendo el más destacado el de las deidades Izanagi e Izanami. Las Personas y enemigos principales también provienen del folclore sintoísta, como Susano-o y Ameno-sagiri.</p>
+	<h2>Persojanes</h2>
+	<h3>Personajes Jugables</h3>
+    <div class="character-grid">
+        <!-- Aquí puedes añadir los personajes específicos de Persona 4 -->
+        <div class="character">
+            <img src="Persona 4/P4_Protagonist.png" alt="Character 1">
+            <h3>Protagonista (Yu Narukami)</h3>
+            <p>El protagonista silencioso de la historia. Se traslada a Inaba debido al trabajo de sus padres y se ve envuelto en los misteriosos asesinatos. Utiliza múltiples Personas en combate.</p>
+        </div>
+        <div class="character">
+            <img src="Persona 4/Chie_Satonaka.png" alt="Character 2">
+            <h3>Chie Satonaka</h3>
+            <p>Una estudiante de secundaria aficionada al kung-fu y la comida picante. Es una de las primeras amigas del protagonista en Inaba y lucha con una Persona basada en artes marciales en combate.</p>
+        </div>
+		<div class="character">
+            <img src="Persona 4/Yosuke_Hanamura.png" alt="Character 3">
+            <h3>Yosuke Hanamura</h3>
+            <p>El bromista del grupo y amigo cercano del protagonista. Trabaja en la tienda de conveniencia de su familia y lucha con una Persona basada en la velocidad y la agilidad en combate.</p>
+        </div>
+		<div class="character">
+            <img src="Persona 4/Yukiko_Amagi.png" alt="Character 4">
+            <h3>Yukiko Amagi</h3>
+            <p>La heredera de la posada local. Es tranquila y refinada, pero anhela libertad de su destino predestinado. Lucha con una Persona basada en habilidades mágicas de fuego en combate.</p>
+        </div>
+		<div class="character">
+            <img src="Persona 4/Kanji_Tatsumi.png" alt="Character 5">
+            <h3>Kanji Tatsumi</h3>
+            <p>Un matón de corazón blando que lucha con problemas de identidad y masculinidad. Utiliza una Persona basada en habilidades físicas de fuerza en combate.</p>
+        </div>
+		<div class="character">
+            <img src="Persona 4/Rise_Kujikawa.png" alt="Character 6">
+            <h3>Rise Kujikawa</h3>
+            <p>Una idol retirada que se muda a Inaba. Es alegre y extrovertida, pero enfrenta desafíos con su propia identidad. Lucha con una Persona basada en habilidades de soporte en combate.</p>
+        </div>
+		<div class="character">
+            <img src="Persona 4/Naoto_Shirogane.png" alt="Character 7">
+            <h3>Naoto Shirogane</h3>
+            <p>Un joven detective prodigio que investiga los asesinatos en Inaba. Es inteligente y serio, pero lucha con problemas de identidad y aceptación. Utiliza una Persona basada en habilidades de pistola y magia en combate.</p>
+        </div>
+		<div class="character">
+            <img src="Persona 4/P4_Teddie_Full.png" alt="Character 8">
+            <h3>Teddie</h3>
+            <p>Una extraña mascota oso que reside en TV World y que perdió la memoria. De naturaleza extraña, pero alegre.</p>
+    	</div>
+			
+	</div>	
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/KClnQgyPacU?si=OGdbD6zWB026MrG1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="empty-box"></div>
+</main>
+
+<footer>
+    <p>© 2024 Gaming Arcana</p>
+    <a href="#edit1">Editar 1</a> |
+    <a href="#edit2">Editar 2</a>
+</footer>
+
+<audio id="background-music" src="Persona4/Persona 4 OST - Reach Out To The Truth.mp3" autoplay loop volume="0.5" style="display:none"></audio>
+
+<script>
+    var audio = document.getElementById('background-music');
+    var audioControlButton = document.getElementById('audio-control-button');
+
+    function toggleAudio() {
+        if (audio.paused) {
+            audio.play();
+            audioControlButton.innerHTML = '<i class="fas fa-pause"></i>';
+        } else {
+            audio.pause();
+            audioControlButton.innerHTML = '<i class="fas fa-play"></i>';
+        }
+    }
+</script>
+</body>
+</html>
